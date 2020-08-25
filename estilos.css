@@ -1,0 +1,725 @@
+/* reset
+		http://meyerweb.com/eric/tools/css/reset/
+		v2.0 | 20110126
+		   License: none (public domain) */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+/* end reset */
+
+/* estilos generales */
+	*{
+		box-sizing: border-box;
+		text-decoration: none;
+		list-style: none;
+	}
+	div{
+		overflow: hidden;
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	hr{
+		border: 1px solid white;
+		border-radius: 5px;
+		width: 100px;
+	}
+	button{
+		background-color: rgba(0, 0, 0, 0);
+		border: solid 4px;
+		color: white;
+		font-size: 18px;
+		max-width: 450px;
+		padding: 25px 35px;
+	}
+
+/* estilos tipograficos */
+	body{
+		font-family: 'Open Sans', sans-serif;
+		line-height: 1.5;
+	}
+	h1{
+		font-weight: 800;
+		color: white;
+		font-size: 68px;
+		text-align: center;
+		line-height: 1;
+	}
+	h2{
+		font-weight: 800;
+		color: white;
+		font-size: 46px;
+		text-align: center;
+		line-height: 1;
+	}
+	h3{
+		font-weight: 800;
+		color: white;
+		font-size: 68px;
+		text-align: center;
+		line-height: 1;
+	}
+	h4{
+		font-weight: 800;
+		color: black;
+		font-size: 30px;
+		text-align: left;
+		line-height: 1;
+		padding-left: 20px;
+	}
+	p{
+		font-weight: 400;
+		color: #f5f0ed;
+		font-size: 22px;
+		text-align: center;
+		line-height: 1.5;
+	}
+	strong{
+		font-weight: 800;
+	}
+
+/* estilos especificos */
+	/* menu de navegacion */
+	nav{
+		height: 80px;
+		width: 100%;
+	}
+	nav img{
+		margin: 15px 50px;
+	}
+	nav i{
+		background-color: #d03b40;
+		border-radius: 3px;
+		padding: 5px 10px;
+	}
+	nav ul{
+		float: right;
+		margin-right: 20px;
+	}
+	nav ul li{
+		display: inline-block;
+		line-height: 80px;
+		font-weight: 800;
+		margin: 0 5px;
+	}
+	nav ul li a{
+		color: white;
+		font-size: 17px;
+		padding: 7px 13px;
+		border-radius: 3px;
+	}
+	a.active, a:hover{
+		background: #d03b40;
+		transition: .5s;
+	}
+	.checkbtn{
+		font-size: 30px;
+		color: white;
+		float: right;
+		line-height: 80px;
+		margin-right: 40px;
+		cursor: pointer;
+		display: none;
+	}
+	#check{
+		display: none;
+	}
+	@media (max-width: 952px){
+		nav img{
+			padding-left: 50px;
+		}
+		nav ul li a{
+			font-size: 16px;
+		}
+	}
+	@media (max-width: 1000px){
+		.checkbtn{
+			display: block;
+		}
+		ul{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			background: #d03b40;
+			top: 80px;
+			left: -100%;
+			text-align: center;
+			transition: all .5s;
+		}
+		nav ul li{
+			display: block;
+			margin: 50px 0;
+			line-height: 30px;
+		}
+		nav ul li a{
+			font-size: 18px;
+		}
+		a:hover,a.active{
+			background: none;
+			color: #ded6c0;
+		}
+		#check:checked ~ ul{
+			left: 0;
+		}
+	}
+
+	/* banner principal */
+	.banner-principal{
+		background-image: url(imagenes/fondo1.jpg);
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 880px;
+	}
+	.contenido-banner{
+		display: flex;
+		flex-flow: column wrap;
+		margin-top: 150px;
+	}
+	.contenido-banner h1{
+		margin: 0px;
+		padding: 40px;
+	}
+	.contenido-banner p{
+		padding: 50px 200px;
+	}
+
+	/* contenedor1 */
+	.contenedor1{
+		display: flex;
+		width: 100%;
+		height: 620px;
+		margin: 0px;
+		padding: 0px;
+	}
+	.halfcontent1{
+		flex: 1 1 50%;
+		height: 620px;
+		background-color: #d03b40;
+	}
+	.halfcontent1 h2{
+		color: #ded6c0;
+		margin-top: 160px;
+		padding: 40px;
+	}
+	.halfcontent1 p{
+		color: #ded6c0;
+		margin: 0px 100px;
+	}
+	.halfcontent2{
+		flex: 1 1 50%;
+		height: 620px;
+		background-color: #ded6c0;
+	}
+	.halfcontent2 h2{
+		color: #d03b40;
+		margin-top: 160px;
+		padding: 40px;
+	}
+	.halfcontent2 p{
+		color: #d03b40;
+		margin: 0px 100px;
+	}
+
+	/* contenedor2 */
+	.contenedor2{
+		display: flex;
+		flex-flow: column wrap;
+		background-image: url(imagenes/fondo2.jpg);
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 850px;
+	}
+	.contenedor2 h3{
+		margin-top: 210px;
+		padding: 40px;
+	}
+	.contenedor2 p{
+		padding: 50px 200px;
+	}
+	.contenedor2 button{
+		align-self: center;
+	}
+
+	/* contenedor3 */
+	.contenedor3-fondo{
+	background-color: #f5f0ed;
+	}
+	.contenedor3{
+		display: flex;
+		flex-flow: row wrap;
+		height: 600px;
+		margin: 100px 30px;
+	}
+	.contenedor-pan{
+		display: flex;
+		flex: 1 1 50%;
+	}
+	.contenedor-tartas{
+		display: flex;
+		flex: 1 1 50%;
+	}
+	.contenedor-dulces{
+		display: flex;
+		flex: 1 1 50%;
+	}
+	.contenedor-ingredientes{
+		display: flex;
+		flex: 1 1 50%;
+	}
+	.imagen img{
+		display: flex;
+		flex: 1 1 30%;
+		padding: 20px 20px 20px 45px;
+	}
+	.contenido{
+		display: flex;
+		flex: 1 1 70%;
+		flex-flow: column wrap;
+	}
+	.contenido p{
+		color: #3c3c3b;
+		text-align: left;
+		padding: 20px;
+		font-size: 18px;
+	}
+
+	/* contenedor4 */
+	.contenedor4{
+		display: flex;
+		width: 100%;
+		height: 620px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	/* footer */
+	.footer{
+		background-color: #241d1b;
+		width: 100%;
+		height: 260px;
+		margin: 0px;
+		padding: 0px;
+	}
+	.footer p{
+		text-align: left;
+		font-size: 16;
+		padding: 100px 40px;
+	}
+
+/* media queries */
+
+	/* responsive tablet horizontal */
+	@media (min-width: 768px) and (max-width: 1300px){
+		/* menu de navegacion */
+		nav img{
+			margin-left: 0px;
+			padding-left: 40px;
+		}
+		/* banner principal */
+		.banner-principal{
+			height: 1060px;
+		}
+		.contenido-banner{
+			margin: 60px 30px;
+		}
+		.contenido-banner h1{
+			font-size: 50px;
+		}
+		.contenido-banner p{
+			font-size: 26px;
+			padding: 80px 60px;
+		}
+		/* contenedor1 */
+		.contenedor1{
+			flex-flow: column wrap;
+			height: 800px;
+		}
+		.halfcontent1 h2{
+			font-size: 40px;
+			margin-top: 30px;
+			padding-bottom: 30px;
+		}
+		.halfcontent1 p{
+			font-size: 22px;
+		}
+		.halfcontent2 h2{
+			font-size: 40px;
+			margin-top: 30px;
+			padding-bottom: 30px;
+		}
+		.halfcontent2 p{
+			font-size: 22px;
+		}
+		/* contenedor2 */
+		.contenedor2{
+			background-position: left;
+			height: 900px;
+		}
+		.contenedor2 h3{
+			font-size: 50px;
+		}
+		.contenedor2 p{
+			font-size: 22px;
+			padding: 60px 40px;
+		}
+		.contenedor2 button{
+			font-size: 20px;
+		}
+		/* contenedor3 */
+		.contenedor3{
+			flex-flow: column;
+			height: 1600px;
+			margin: 60px 50px;
+		}
+		.contenedor-pan{
+			flex-flow: column;
+			flex: 1 1 25%;
+		}
+		.contenedor-tartas{
+			flex-flow: column;
+			flex: 1 1 25%;
+		}
+		.contenedor-dulces{
+			flex-flow: column;
+			flex: 1 1 25%;
+		}
+		.contenedor-ingredientes{
+			flex-flow: column;
+			flex: 1 1 25%;
+		}
+		.imagen{
+			flex-flow: column;
+			flex: 1 1 40%;
+		}
+		.imagen img{
+			height: 100%;
+			width: auto;
+			margin: auto;
+			padding: 0px;
+		}
+		.contenido{
+			flex-flow: column;
+			flex: 1 1 60%;
+		}
+		.contenido h4{
+			text-align: center;
+			padding: 20px;
+		}
+		.contenido p{
+			text-align: left;
+			font-size: 20px;
+			padding: 0px;
+		}
+		/* contenedor4 */
+		.contenedor4{
+			flex-flow: column;
+		}
+		/* footer */
+		.footer{
+			height: 150px;
+		}
+		.footer p{
+			text-align: center;
+			font-size: 12px;
+			margin: auto;
+			padding: 50px 40px;
+		}
+	}
+
+	/* responsive tablet vertical */
+	@media (min-width: 481px) and (max-width: 767px){
+		/* menu de navegacion */
+		nav img{
+			margin-left: 0px;
+			padding-left: 30px;
+		}
+		/* banner principal */
+		.banner-principal{
+			height: 800px;
+		}
+		.contenido-banner{
+			margin-top: 50px;
+		}
+		.contenido-banner h1{
+			font-size: 36px;
+			margin: 0px;
+			padding: 50px 45px;
+		}
+		.contenido-banner p{
+			font-size: 24px;
+			padding: 30px 50px;
+		}
+		/* contenedor1 */
+		.contenedor1{
+			flex-flow: column wrap;
+			height: 600px;
+		}
+		.halfcontent1 h2{
+			font-size: 30px;
+			margin-top: 30px;
+			padding: 30px 50px;
+		}
+		.halfcontent1 p{
+			font-size: 20px;
+			margin: 0px 40px;
+		}
+		.halfcontent2 h2{
+			font-size: 30px;
+			margin-top: 30px;
+			padding: 30px 50px;
+		}
+		.halfcontent2 p{
+			font-size: 20px;
+			margin: 0px 40px;
+		}
+		/* contenedor2 */
+		.contenedor2{
+			background-position: left;
+			height: 600px;
+		}
+		.contenedor2 h3{
+			font-size: 36px;
+			margin-top: 80px;
+			padding: 30px 30px 60px 30px;
+		}
+		.contenedor2 p{
+			font-size: 20px;
+			padding: 40px 30px;
+		}
+		.contenedor2 button{
+			font-size: 16px;
+		}
+		/* contenedor3 */
+		.contenedor3{
+			flex-flow: column;
+			height: 1600px;
+			margin: 60px 50px;
+		}
+		.contenedor-pan{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-tartas{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-dulces{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-ingredientes{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.imagen{
+			flex-flow: column;
+			flex: 1 1 30%;
+		}
+		.imagen img{
+			height: 100%;
+			width: auto;
+			margin: auto;
+			padding: 0px;
+		}
+		.contenido{
+			flex-flow: column;
+			flex: 1 1 70%;
+		}
+		.contenido h4{
+			text-align: center;
+			padding: 20px;
+		}
+		.contenido p{
+			text-align: left;
+			font-size: 18px;
+			padding: 0px;
+		}
+		/* contenedor4 */
+		.contenedor4{
+			flex-flow: column;
+		}
+		/* footer */
+		.footer{
+			height: 150px;
+		}
+		.footer p{
+			text-align: center;
+			font-size: 12px;
+			margin: auto;
+			padding: 50px 40px;
+		}
+	}
+
+	/* responsive smartphone vertical */
+	@media (max-width: 480px){
+		/* menu de navegacion */
+		nav img{
+			margin-left: 0px;
+			padding-left: 30px;
+		}
+		/* banner principal */
+		.banner-principal{
+			height: 650px;
+		}
+		.contenido-banner{
+			margin-top: 0px;
+		}
+		.contenido-banner h1{
+			font-size: 32px;
+			margin: 0px;
+			padding: 50px 45px;
+		}
+		.contenido-banner p{
+			font-size: 20px;
+			padding: 20px 50px;
+		}
+		/* contenedor1 */
+		.contenedor1{
+			flex-flow: column wrap;
+			height: 800px;
+		}
+		.halfcontent1 h2{
+			font-size: 24px;
+			margin-top: 30px;
+			padding: 30px 50px;
+		}
+		.halfcontent1 p{
+			font-size: 18px;
+			margin: 0px 40px;
+		}
+		.halfcontent2 h2{
+			font-size: 24px;
+			margin-top: 30px;
+			padding: 30px 50px;
+		}
+		.halfcontent2 p{
+			font-size: 18px;
+			margin: 0px 40px;
+		}
+		/* contenedor2 */
+		.contenedor2{
+			background-position: left;
+			height: 600px;
+		}
+		.contenedor2 h3{
+			font-size: 30px;
+			margin-top: 80px;
+			padding: 30px 30px 60px 30px;
+		}
+		.contenedor2 p{
+			font-size: 20px;
+			padding: 40px 30px;
+		}
+		.contenedor2 button{
+			font-size: 12px;
+		}
+		/* contenedor3 */
+		.contenedor3{
+			flex-flow: column;
+			height: 1800px;
+			margin: 60px 30px;
+		}
+		.contenedor-pan{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-tartas{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-dulces{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.contenedor-ingredientes{
+			flex-flow: column;
+			flex: 1 1 25%;
+			margin-bottom: 20px;
+		}
+		.imagen{
+			flex-flow: column;
+			flex: 1 1 30%;
+		}
+		.imagen img{
+			height: 100%;
+			width: auto;
+			margin: auto;
+			padding: 0px;
+		}
+		.contenido{
+			flex-flow: column;
+			flex: 1 1 70%;
+		}
+		.contenido h4{
+			text-align: center;
+			padding: 20px;
+		}
+		.contenido p{
+			text-align: left;
+			padding: 0px;
+		}
+		/* contenedor4 */
+		.contenedor4{
+			flex-flow: column;
+		}
+		/* footer */
+		.footer{
+			height: 150px;
+		}
+		.footer p{
+			text-align: center;
+			font-size: 12px;
+			margin: auto;
+			padding: 50px 40px;
+		}
